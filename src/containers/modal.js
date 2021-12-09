@@ -17,8 +17,7 @@ export default function ModalContainer({
 
   function refreshPage({ setLoading }) {
     setLoading(false);
-    window.location.href =
-      "https://manoj-banking-system.netlify.app/all-customers";
+    window.location.reload();
   }
   const newCustomerList = customersList.filter(
     (customer) => !(customer.id === customerId)
