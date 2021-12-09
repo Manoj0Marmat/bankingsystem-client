@@ -17,7 +17,7 @@ export default function ModalContainer({
 
   function refreshPage({ setLoading }) {
     setLoading(false);
-    window.location.href = "https://manoj-banking-system.netlify.app/home";
+    // window.location.href = "https://manoj-banking-system.netlify.app/home";
   }
   const newCustomerList = customersList.filter(
     (customer) => !(customer.id === customerId)
@@ -88,19 +88,19 @@ export default function ModalContainer({
         ) : targetCustomerId === null ? (
           <Modal.RedButton disabled>Pay</Modal.RedButton>
         ) : (
-          // <Link to=" ">
-          <Modal.GreenButton
-            onClick={() => {
-              setLoading(true);
-              payMoney({ data });
-              setTimeout(() => {
-                refreshPage({ setLoading });
-              }, 3500);
-            }}
-          >
-            Pay
-          </Modal.GreenButton>
-          // </Link>
+          <Link to={ROUTES.AllCustomers}>
+            <Modal.GreenButton
+              onClick={() => {
+                setLoading(true);
+                payMoney({ data });
+                setTimeout(() => {
+                  refreshPage({ setLoading });
+                }, 3500);
+              }}
+            >
+              Pay
+            </Modal.GreenButton>
+          </Link>
         )}
         {loading && (
           <Modal.Loading>
