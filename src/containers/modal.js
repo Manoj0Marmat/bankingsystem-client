@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Modal } from "../components";
 import Axios from "axios";
-import { Link } from "react-router-dom";
-import * as ROUTES from "../constants/routes";
 import payMoney from "../backend";
 
 export default function ModalContainer({
@@ -17,7 +15,7 @@ export default function ModalContainer({
 
   function refreshPage({ setLoading }) {
     setLoading(false);
-    // window.location.href = "https://manoj-banking-system.netlify.app/home";
+    window.location.href = "https://manoj-banking-system.netlify.app";
   }
   const newCustomerList = customersList.filter(
     (customer) => !(customer.id === customerId)
@@ -88,19 +86,17 @@ export default function ModalContainer({
         ) : targetCustomerId === null ? (
           <Modal.RedButton disabled>Pay</Modal.RedButton>
         ) : (
-          <Link to={ROUTES.HOME}>
-            <Modal.GreenButton
-              onClick={() => {
-                setLoading(true);
-                payMoney({ data });
-                setTimeout(() => {
-                  refreshPage({ setLoading });
-                }, 3500);
-              }}
-            >
-              Pay
-            </Modal.GreenButton>
-          </Link>
+          <Modal.GreenButton
+            onClick={() => {
+              setLoading(true);
+              payMoney({ data });
+              setTimeout(() => {
+                refreshPage({ setLoading });
+              }, 3500);
+            }}
+          >
+            Pay
+          </Modal.GreenButton>
         )}
         {loading && (
           <Modal.Loading>
