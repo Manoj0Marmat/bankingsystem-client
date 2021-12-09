@@ -88,7 +88,7 @@ export default function ModalContainer({
         ) : targetCustomerId === null ? (
           <Modal.RedButton disabled>Pay</Modal.RedButton>
         ) : (
-          <Link to={ROUTES.AllCustomers}>
+          <Link to={ROUTES.HOME}>
             <Modal.GreenButton
               onClick={() => {
                 setLoading(true);
