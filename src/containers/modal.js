@@ -88,19 +88,19 @@ export default function ModalContainer({
         ) : targetCustomerId === null ? (
           <Modal.RedButton disabled>Pay</Modal.RedButton>
         ) : (
-          <Link to=" ">
-            <Modal.GreenButton
-              onClick={() => {
-                setLoading(true);
-                payMoney({ data });
-                setTimeout(() => {
-                  refreshPage({ setLoading });
-                }, 3500);
-              }}
-            >
-              Pay
-            </Modal.GreenButton>
-          </Link>
+          // <Link to=" ">
+          <Modal.GreenButton
+            onClick={() => {
+              setLoading(true);
+              payMoney({ data });
+              setTimeout(() => {
+                refreshPage({ setLoading });
+              }, 3500);
+            }}
+          >
+            Pay
+          </Modal.GreenButton>
+          // </Link>
         )}
         {loading && (
           <Modal.Loading>
