@@ -17,8 +17,7 @@ export const Container = styled.div`
 
   @media (max-width: 600px) {
     padding: 10px 18px 5px;
-    width: 100%;
-    height: 300px;
+    width: 95%;
   }
 `;
 
@@ -109,8 +108,8 @@ export const Img = styled.img`
 
 export const Pane = styled.div`
   margin-bottom: 2rem;
-  @media (max-width: 1000px) {
-    margin-bottom: 2rem;
+  @media (max-width: 600px) {
+    margin-bottom: 0.2rem;
   }
 `;
 export const Button = styled.button`

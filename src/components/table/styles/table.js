@@ -16,29 +16,42 @@ export const StyledTable = styled.div`
   z-index: 1;
 
   @media (max-width: 600px) {
-    padding: 10px 18px 5px;
-    width: 100%;
-    height: 300px;
+    padding: 45px 0 0 0;
+    width: 95%;
+    height: 700px;
+    border-radius: 0.5rem;
   }
 `;
 
 export const THead = styled.thead`
   align-items: center;
+  @media (max-width: 600px) {
+    margin: none;
+  }
 `;
 
 export const TFoot = styled.tfoot`
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: 600px) {
+    margin: none;
+  }
 `;
 
 export const TBody = styled.tbody`
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: 600px) {
+    margin: none;
+  }
 `;
 
 export const TR = styled.tr`
   :hover {
     background-color: #ddd;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
   }
 `;
 
@@ -55,6 +68,17 @@ export const TH = styled.th`
   background-color: rgba(144, 19, 254, 0.6);
   border: 5px solid rgba(255, 255, 255, 0.125);
   color: white;
+  @media (max-width: 600px) {
+    padding: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    :nth-child(1) {
+      display: none;
+    }
+    :nth-child(2) {
+      display: none;
+    }
+  }
 `;
 
 export const TD = styled.td`
@@ -62,6 +86,18 @@ export const TD = styled.td`
   margin-right: auto;
   border: 1px solid #ddd;
   padding: 8px;
+  @media (max-width: 600px) {
+    margin: none;
+    padding: 1px;
+    :nth-child(2) {
+      display: none;
+    }
+    :nth-child(1) {
+      display: none;
+    }
+
+    margin: 0px 0 20px 0;
+  }
 `;
 export const Logo = styled.img`
   vertical-align: middle;
@@ -76,6 +112,10 @@ export const Logo = styled.img`
   -webkit-backdrop-filter: blur(17px);
   border-radius: 50%;
   border: 3px solid rgba(144, 19, 254, 0.6);
+  @media (max-width: 600px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 export const Button = styled.button`
   justify-content: flex-end;
@@ -105,6 +145,10 @@ export const Button = styled.button`
   :hover {
     transition: 0.1s ease-in-out;
     background: rgba(144, 19, 254, 0.41);
+  }
+  @media (max-width: 600px) {
+    margin: 10px 0 10px 0;
+    font-size: 12px;
   }
 `;
 

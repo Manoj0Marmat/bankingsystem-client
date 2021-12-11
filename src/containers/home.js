@@ -9,10 +9,10 @@ export default function HomeContainer() {
       <Link to="/">
         <Home.TopButton>Go Back</Home.TopButton>
       </Link>
+      <Home.Pane />
+      <Home.Pane />
       <Home.Title>
-        <Home.Pane>
-          WELCOME To <Home.Span>Bank</Home.Span>
-        </Home.Pane>
+        WELCOME To <Home.Span>Bank</Home.Span>
       </Home.Title>
 
       <Home.Pane />

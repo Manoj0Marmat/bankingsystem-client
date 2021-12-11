@@ -31,6 +31,7 @@ export const Title = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 28px;
+    /* margin-top: 60px; */
   }
 `;
 
@@ -57,6 +58,10 @@ export const Footer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 export const Button = styled.button`
   justify-content: flex-end;
@@ -87,6 +92,12 @@ export const Button = styled.button`
     transition: 1s ease-in-out;
     background: #9013fe;
   }
+
+  @media (max-width: 600px) {
+    padding: 5px;
+    margin: 10px;
+    width: 200px;
+  }
 `;
 export const TopButton = styled(Button)`
   position: absolute;
@@ -98,5 +109,9 @@ export const TopButton = styled(Button)`
   :hover {
     transition: 0.1s ease-in-out;
     background: rgba(208, 2, 27, 0.6);
+  }
+  @media (max-width: 600px) {
+    width: auto;
+    margin: 0px;
   }
 `;
