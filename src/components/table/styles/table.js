@@ -16,9 +16,9 @@ export const StyledTable = styled.div`
   z-index: 1;
 
   @media (max-width: 600px) {
-    padding: 45px 10px 0 10px;
+    padding: 45px 5px 0 5px;
     width: 95%;
-    height: 700px;
+    height: 600px;
     border-radius: 0.5rem;
   }
 `;
@@ -53,6 +53,9 @@ export const TR = styled.tr`
   @media (max-width: 600px) {
     font-size: 12px;
   }
+  @media (max-width: 330px) {
+    font-size: 9px;
+  }
 `;
 
 export const TH = styled.th`
@@ -62,7 +65,7 @@ export const TH = styled.th`
   padding: 8px;
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
   backdrop-filter: blur(6px) saturate(200%);
   -webkit-backdrop-filter: blur(6px) saturate(200%);
   background-color: rgba(144, 19, 254, 0.6);
@@ -70,6 +73,7 @@ export const TH = styled.th`
   color: white;
   @media (max-width: 600px) {
     padding: 0;
+    font-size: 9px;
     padding-top: 12px;
     padding-bottom: 12px;
     :nth-child(1) {
@@ -85,6 +89,7 @@ export const TD = styled.td`
   margin-left: auto;
   margin-right: auto;
   border: 1px solid #ddd;
+  text-align: center;
   padding: 8px;
   @media (max-width: 600px) {
     margin: none;
@@ -148,7 +153,7 @@ export const Button = styled.button`
   }
   @media (max-width: 600px) {
     margin: 10px 0 10px 0;
-    font-size: 12px;
+    font-size: 9px;
   }
 `;
 

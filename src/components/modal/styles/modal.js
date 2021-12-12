@@ -34,8 +34,8 @@ export const Container = styled.div`
 
   @media (max-width: 600px) {
     padding: 10px 18px 5px;
-    width: 100%;
-    height: 300px;
+
+    width: 390px;
   }
 `;
 
