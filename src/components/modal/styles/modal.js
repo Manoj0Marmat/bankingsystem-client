@@ -4,6 +4,7 @@ export const Background = styled.div`
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
+
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.9);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(8px);
