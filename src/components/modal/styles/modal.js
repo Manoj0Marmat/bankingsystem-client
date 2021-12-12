@@ -34,7 +34,7 @@ export const Container = styled.div`
 
   @media (max-width: 600px) {
     padding: 10px 18px 5px;
-
+    height: 560px;
     width: 390px;
   }
 `;
@@ -62,6 +62,10 @@ export const Title = styled.h1`
   color: white;
   font-weight: 900;
   font-size: 25px;
+  @media (max-width: 600px) {
+    font-weight: 600;
+    font-size: 18px;
+  }
 `;
 
 export const Body = styled.p`
@@ -106,6 +110,12 @@ export const GreenButton = styled.button`
   :hover {
     transition: 1s ease-in-out;
     background: rgba(48, 155, 72);
+  }
+
+  @media (max-width: 600px) {
+    font-weight: 600;
+    font-size: 18px;
+    width: 100px;
   }
 `;
 export const RedButton = styled(GreenButton)`
@@ -165,6 +175,10 @@ export const Select = styled.select`
     border-color: rgba(255, 255, 255, 0.125);
     box-shadow: 0 1px 3px -2px #9098a9;
   }
+  @media (max-width: 600px) {
+    font-weight: 600;
+    font-size: 15px;
+  }
 `;
 
 export const Option = styled.option`
@@ -210,6 +224,9 @@ export const Highlight = styled.span`
       width: 0;
       background: transparent;
     }
+  }
+  @media (max-width: 600px) {
+    width: 80px;
   }
 `;
 export const Bar = styled.span`
@@ -285,6 +302,11 @@ export const Input = styled.input`
     top: -20px;
     font-size: 14px;
     color: rgba(252, 252, 252, 0.9);
+  }
+  @media (max-width: 600px) {
+    font-weight: 600;
+    font-size: 15px;
+    width: 200px;
   }
 `;
 export const Loading = styled.div`
