@@ -277,6 +277,12 @@ export const Input = styled.input`
   border-radius: 12px;
   border: 5px solid rgba(144, 19, 254, 0.4);
   box-shadow: 0 1px 3px -2px #9098a9;
+  @media (max-width: 600px) {
+    font-weight: 600;
+    font-size: 15px;
+    width: 200px;
+    animation: none;
+  }
 
   :focus {
     outline: none;
@@ -302,11 +308,6 @@ export const Input = styled.input`
     top: -20px;
     font-size: 14px;
     color: rgba(252, 252, 252, 0.9);
-  }
-  @media (max-width: 600px) {
-    font-weight: 600;
-    font-size: 15px;
-    width: 200px;
   }
 `;
 export const Loading = styled.div`
