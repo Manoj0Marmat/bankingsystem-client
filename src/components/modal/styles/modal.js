@@ -110,9 +110,11 @@ export const GreenButton = styled.button`
   :hover {
     transition: 1s ease-in-out;
     background: rgba(48, 155, 72);
+    color: white;
   }
 
   @media (max-width: 600px) {
+    color: white;
     font-weight: 600;
     font-size: 18px;
     width: 100px;
@@ -120,9 +122,11 @@ export const GreenButton = styled.button`
 `;
 export const RedButton = styled(GreenButton)`
   background-color: rgba(255, 117, 117, 0.7);
+  color: white;
   :hover {
     transition: 1s ease-in-out;
     background: rgba(255, 117, 117, 0.7);
+    color: white;
   }
 `;
 export const TopButton = styled(GreenButton)`
@@ -132,9 +136,11 @@ export const TopButton = styled(GreenButton)`
   padding: 3px;
   z-index: 1;
   background-color: rgba(208, 2, 27, 0.3);
+  color: white;
   :hover {
     transition: 0.1s ease-in-out;
     background: rgba(208, 2, 27, 0.6);
+    color: white;
   }
 `;
 
@@ -157,24 +163,28 @@ export const Select = styled.select`
   width: auto;
   display: flex;
   justify-content: left;
-  backdrop-filter: blur(6px) saturate(200%);
-  -webkit-backdrop-filter: blur(6px) saturate(200%);
-  background-color: rgba(144, 19, 254, 0.41);
-  border-radius: 12px;
+
   border: 5px solid rgba(255, 255, 255, 0.125);
   box-shadow: 0 1px 3px -2px #9098a9;
   cursor: pointer;
   font-family: inherit;
   color: white;
   font-weight: 900;
+  background-color: rgba(144, 19, 254, 0.41);
   font-size: 18px;
   transition: all 150ms ease;
   -webkit-appearance: none;
-  :focus {
-    outline: none;
-    border-color: rgba(255, 255, 255, 0.125);
-    box-shadow: 0 1px 3px -2px #9098a9;
+  @media (min-width: 600px) {
+    backdrop-filter: blur(6px) saturate(200%);
+    -webkit-backdrop-filter: blur(6px) saturate(200%);
+    border-radius: 12px;
+    :focus {
+      outline: none;
+      border-color: rgba(255, 255, 255, 0.125);
+      box-shadow: 0 1px 3px -2px #9098a9;
+    }
   }
+
   @media (max-width: 600px) {
     font-weight: 600;
     font-size: 15px;
@@ -197,34 +207,36 @@ export const Highlight = styled.span`
   left: 0;
   pointer-events: none;
   opacity: 0.5;
+  @media (min-width: 600px) {
+    @-webkit-keyframes inputHighlighter {
+      from {
+        background: rgba(252, 252, 252, 0.9);
+      }
+      to {
+        width: 0;
+        background: transparent;
+      }
+    }
+    @-moz-keyframes inputHighlighter {
+      from {
+        background: rgba(252, 252, 252, 0.9);
+      }
+      to {
+        width: 0;
+        background: transparent;
+      }
+    }
+    @keyframes inputHighlighter {
+      from {
+        background: rgba(252, 252, 252, 0.9);
+      }
+      to {
+        width: 0;
+        background: transparent;
+      }
+    }
+  }
 
-  @-webkit-keyframes inputHighlighter {
-    from {
-      background: rgba(252, 252, 252, 0.9);
-    }
-    to {
-      width: 0;
-      background: transparent;
-    }
-  }
-  @-moz-keyframes inputHighlighter {
-    from {
-      background: rgba(252, 252, 252, 0.9);
-    }
-    to {
-      width: 0;
-      background: transparent;
-    }
-  }
-  @keyframes inputHighlighter {
-    from {
-      background: rgba(252, 252, 252, 0.9);
-    }
-    to {
-      width: 0;
-      background: transparent;
-    }
-  }
   @media (max-width: 600px) {
     width: 80px;
   }
@@ -233,24 +245,25 @@ export const Bar = styled.span`
   position: relative;
   display: block;
   width: 300px;
-
-  :before,
-  :after {
-    content: "";
-    height: 2px;
-    width: 0;
-    bottom: 1px;
-    position: absolute;
-    background: rgba(252, 252, 252, 0.9);
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-  }
-  :before {
-    left: 50%;
-  }
-  :after {
-    right: 50%;
+  @media (min-width: 600px) {
+    :before,
+    :after {
+      content: "";
+      height: 2px;
+      width: 0;
+      bottom: 1px;
+      position: absolute;
+      background: rgba(252, 252, 252, 0.9);
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+    }
+    :before {
+      left: 50%;
+    }
+    :after {
+      right: 50%;
+    }
   }
 `;
 export const Label = styled.label`
@@ -270,11 +283,6 @@ export const Input = styled.input`
   padding: 10px 10px 10px 5px;
   display: block;
   width: 300px;
-  border: none;
-  backdrop-filter: blur(6px) saturate(200%);
-  -webkit-backdrop-filter: blur(6px) saturate(200%);
-  background-color: rgba(252, 252, 252, 0.41);
-  border-radius: 12px;
   border: 5px solid rgba(144, 19, 254, 0.4);
   :focus ~ Label,
   :valid ~ Label {
@@ -284,6 +292,11 @@ export const Input = styled.input`
   }
   box-shadow: 0 1px 3px -2px #9098a9;
   @media (min-width: 600px) {
+    backdrop-filter: blur(6px) saturate(200%);
+    -webkit-backdrop-filter: blur(6px) saturate(200%);
+    background-color: rgba(252, 252, 252, 0.41);
+    border-radius: 12px;
+    border: 5px solid rgba(144, 19, 254, 0.4);
     font-weight: 600;
     font-size: 15px;
     width: 200px;
