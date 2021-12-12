@@ -16,7 +16,7 @@ export const StyledTable = styled.div`
   z-index: 1;
 
   @media (max-width: 600px) {
-    padding: 45px 0 0 0;
+    padding: 45px 10px 0 10px;
     width: 95%;
     height: 700px;
     border-radius: 0.5rem;
