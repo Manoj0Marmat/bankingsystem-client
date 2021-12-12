@@ -276,38 +276,42 @@ export const Input = styled.input`
   background-color: rgba(252, 252, 252, 0.41);
   border-radius: 12px;
   border: 5px solid rgba(144, 19, 254, 0.4);
-  box-shadow: 0 1px 3px -2px #9098a9;
-  @media (max-width: 600px) {
-    font-weight: 600;
-    font-size: 15px;
-    width: 200px;
-    animation: none;
-  }
-
-  :focus {
-    outline: none;
-  }
-  :focus ~ Label,
-  :valid ~ Label {
-    top: -20px;
-    font-size: 14px;
-    color: rgba(144, 19, 254, 0.4);
-  }
-  :focus ~ Highlight {
-    -webkit-animation: inputHighlighter 0.3s ease;
-    -moz-animation: inputHighlighter 0.3s ease;
-    animation: inputHighlighter 0.3s ease;
-  }
-  :focus ~ Bar:before,
-  :focus ~ Bar:after {
-    width: 50%;
-  }
-
   :focus ~ Label,
   :valid ~ Label {
     top: -20px;
     font-size: 14px;
     color: rgba(252, 252, 252, 0.9);
+  }
+  box-shadow: 0 1px 3px -2px #9098a9;
+  @media (min-width: 600px) {
+    font-weight: 600;
+    font-size: 15px;
+    width: 200px;
+    :focus {
+      outline: none;
+    }
+    :focus ~ Label,
+    :valid ~ Label {
+      top: -20px;
+      font-size: 14px;
+      color: rgba(144, 19, 254, 0.4);
+    }
+    :focus ~ Highlight {
+      -webkit-animation: inputHighlighter 0.3s ease;
+      -moz-animation: inputHighlighter 0.3s ease;
+      animation: inputHighlighter 0.3s ease;
+    }
+    :focus ~ Bar:before,
+    :focus ~ Bar:after {
+      width: 50%;
+    }
+
+    :focus ~ Label,
+    :valid ~ Label {
+      top: -20px;
+      font-size: 14px;
+      color: rgba(252, 252, 252, 0.9);
+    }
   }
 `;
 export const Loading = styled.div`
